@@ -374,3 +374,9 @@ body {
 .slick-next {
 	right: 15px;
 }
+.view_custom {
+	align-items: initial;
+}
+.view__inner_content {
+	list-style: none;
+}
