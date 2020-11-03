@@ -1,4 +1,69 @@
+
+
+generateInnerHTML = function(year, obj) {
+
+    let l_box = '<div style="flex-direction: column; padding-right: 10px;">'
+    + '<h4>Major Roles Played</h4>'
+    + '<ul class="ul_view__inner_content">'
+    + obj["roles_played"].map(element => {
+        return '<li>' + element +'</li>'
+        }).join("")
+    + '</ul>'
+    + '<h4>Other Roles Played</h4>'
+    + '<ul class="ul_view__inner_content">'
+    + obj["other_roles_played"].map(element => {
+        return '<li>' + element +'</li>'
+        }).join("")
+    + '</ul>'
+    + '</div>';
+    let r_box = '<div style="flex-direction: column; padding-left: 10px;">'
+    + '<h4>Components</h4>'
+    + '<ul class="ul_view__inner_content">'
+    + obj["components"].map(element => {
+        return '<li>' + element +'</li>'
+        }).join("")
+    + '</ul>'
+    + '</div>';
+
+    let l_box_2 = '';
+    if (obj["impact"].length != 0) {
+        l_box_2 = '<p style="border-top: solid 1px #000;width:  80%; margin: auto; margin-top:20px; "> </p>'
+        + '<h3>How I made a difference</h3>'
+        +  '<div>'
+        + '<ul class="ul_view__inner_content">'
+        + obj["impact"].map(element => {
+            return '<li>' + element +'</li>'
+            }).join("")
+        + '</ul>'
+        + '</div>';
+    
+    }
+
+
+    let html_string  = '<div class="view view--1">'  
+    + '<div class="view__inner view_custom">' 
+    + '<div>'
+    + '<h2 style="font-size: 60px">' + year + " - " + obj["position"] + '</h2>' 
+    + '<div style="display: flex;">'
+    + l_box
+    + '<div style="flex-direction: column; border-right: solid 1px #000">&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/></div>'
+    + r_box
+    + '</div>'
+    + '<div>'
+    + l_box_2
+    + '</div>'
+    + '</div>'
+    + '</div>';
+    return html_string;
+}
+
 $(document).ready(function() {
+
+    cv_data["years"].forEach(year => {
+        $(".views").append(generateInnerHTML(year, cv_data["items"][year]))
+    });
+
+    
     let areClipPathShapesSupported = function() {
 
         let base = 'clipPath',
@@ -9,15 +74,13 @@ $(document).ready(function() {
 
         // Push the prefixed properties into the array of properties.
         for (let i = 0, l = prefixes.length; i < l; i++) {
-            if (window.CP.shouldStopExecution(0)) break;
             let prefixedProperty = prefixes[i] + base.charAt(0).toUpperCase() + base.slice(1); // remember to capitalize!
             properties.push(prefixedProperty);
         }
 
         // Interate over the properties and see if they pass two tests.
-        window.CP.exitedLoop(0);
+        
         for (let i = 0, l = properties.length; i < l; i++) {
-            if (window.CP.shouldStopExecution(1)) break;
             let property = properties[i];
 
             // First, they need to even support clip-path (IE <= 11 does not)...
@@ -30,12 +93,17 @@ $(document).ready(function() {
                 }
             }
         }
-        window.CP.exitedLoop(1);
+        
 
         return false;
     };
 
     let defaultSlickSpeed = 300;
+
+    
+
+
+
 
     $('.views').slick({
         speed: defaultSlickSpeed

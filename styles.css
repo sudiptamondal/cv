@@ -280,7 +280,7 @@ body {
 	overflow: hidden;
 	pointer-events: none;
 	z-index: -1;
-	background: rgba(0, 0, 0, 0.2) url(http://testuje.cz/noise.png) repeat 0 0;
+	background: rgba(0, 0, 0, 0.2) repeat 0 0;
 	-webkit-clip-path: polygon(130px 0, 100% 0, 100% 100%, 0 100%);
 	clip-path: polygon(130px 0, 100% 0, 100% 100%, 0 100%);
 }
