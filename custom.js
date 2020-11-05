@@ -57,6 +57,7 @@ generateInnerHTML = function(year, obj) {
     return html_string;
 }
 
+
 $(document).ready(function() {
 
     cv_data["years"].forEach(year => {
@@ -100,13 +101,9 @@ $(document).ready(function() {
 
     let defaultSlickSpeed = 300;
 
-    
-
-
-
-
     $('.views').slick({
-        speed: defaultSlickSpeed
+        speed: defaultSlickSpeed,
+        initialSlide: 8,
     }).on('beforeChange', (evt, slick, currentSlide, nextSlide) => {
         let delta = Math.abs(currentSlide - nextSlide);
         if (delta === slick.slideCount - 1) {
@@ -117,6 +114,10 @@ $(document).ready(function() {
         $('.views').slick('slickSetOption', 'speed', defaultSlickSpeed);
         $('.timeline__list').find('.timeline__item--active').removeClass('timeline__item--active');
         $('.timeline__list').find(`.timeline__item:nth-child(${currentSlide + 1})`).addClass('timeline__item--active');
+    }).init(function() {
+        $('.timeline__list').find('.timeline__item--active').removeClass('timeline__item--active');
+        $('.timeline__list').find('.timeline__item:nth-child(' + 9 + ')').addClass('timeline__item--active');
+        console.log('init called');
     });
 
     $('.timeline__link').on('click', evt => {
