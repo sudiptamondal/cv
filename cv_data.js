@@ -195,6 +195,35 @@
         "Developed Data Upload utilities for Oracle Cloud which helped reduce setup effort from Days to Hours for multiple clients",
         "Created Employee Creation Utility which is used across Projects. Demo scheduled with Oracle to put on Oracle Marketplace"
       ]
+    },
+    "2021": {
+      "position": "Senior Lead Consultant",
+      "roles_played": [
+        "Customer Master Implementation Lead",
+        "Project Manager",
+        "Solution Architect",
+        "Data Migration Architect",
+        "Liaison with Riversand Manager and Ops for Customer Success"
+      ],
+      "other_roles_played": [
+        "Cross-Functional Co-ordinator",
+        "Business Analyst",
+        "Trainer"
+      ],
+      "components": [
+        "Customer Data Model",
+        "Workflow and Business Rule Architecture",
+        "Integration Solutioning",
+        "EDQ processes",
+        "Custom Utilities Development for Address Validation and DnB(DUNS) Matching",
+        "",
+        "User/Employee Creation BOT"
+      ],
+      "impact": [
+        "First implementation of Riversand at the Organization",
+        "Co-ordinated between Client and Vendors for Project QA Testing",
+        "Took multiple additional roles apart from Technical Lead"
+      ]
     }
   }
 }
