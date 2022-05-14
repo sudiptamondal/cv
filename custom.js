@@ -103,7 +103,7 @@ $(document).ready(function() {
     let firstSlide = cv_data["years"].length
     $('.views').slick({
         speed: defaultSlickSpeed,
-        initialSlide: firstSlide,
+        initialSlide: firstSlide - 1,
     }).on('beforeChange', (evt, slick, currentSlide, nextSlide) => {
         let delta = Math.abs(currentSlide - nextSlide);
         if (delta === slick.slideCount - 1) {
