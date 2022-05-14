@@ -100,10 +100,10 @@ $(document).ready(function() {
     };
 
     let defaultSlickSpeed = 300;
-
+    let firstSlide = cv_data["years"].length
     $('.views').slick({
         speed: defaultSlickSpeed,
-        initialSlide: 8,
+        initialSlide: firstSlide,
     }).on('beforeChange', (evt, slick, currentSlide, nextSlide) => {
         let delta = Math.abs(currentSlide - nextSlide);
         if (delta === slick.slideCount - 1) {
@@ -116,7 +116,7 @@ $(document).ready(function() {
         $('.timeline__list').find(`.timeline__item:nth-child(${currentSlide + 1})`).addClass('timeline__item--active');
     }).init(function() {
         $('.timeline__list').find('.timeline__item--active').removeClass('timeline__item--active');
-        $('.timeline__list').find('.timeline__item:nth-child(' + 9 + ')').addClass('timeline__item--active');
+        $('.timeline__list').find('.timeline__item:nth-child(' + firstSlide + ')').addClass('timeline__item--active');
         console.log('init called');
     });
 
