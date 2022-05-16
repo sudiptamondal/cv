@@ -1,4 +1,4 @@
-    var cv_data = {
+var cv_data = {
   "years": [
     "2012",
     "2013",
@@ -9,11 +9,13 @@
     "2018",
     "2019",
     "2020",
-    "2021"
+    "2021",
+    "2022"
   ],
   "items": {
     "2012": {
       "position": "Software Developer",
+      "companies": ["Ongraph", "Pvt. Ltd."],
       "roles_played": [
         "Web Developer"
       ],
@@ -28,6 +30,7 @@
     },
     "2013": {
       "position": "Software Developer/Freelancer",
+      "companies": ["Infosys Ltd."],
       "roles_played": [
         "Full Stack Developer"
       ],
@@ -44,20 +47,22 @@
     },
     "2014": {
       "position": "Systems Engineer",
+      "companies": ["Infosys Ltd."],
       "roles_played": [
         "Technical Developer"
       ],
       "other_roles_played": [
-		
+
       ],
       "components": [
         "",
-		"Technical and Functional Specification design documentation"
+        "Technical and Functional Specification design documentation"
       ],
       "impact": []
     },
     "2015": {
-      "position": "",
+      "position": "Senior Systems Engineer",
+      "companies": ["Infosys Ltd."],
       "roles_played": [
         "Technical Developer"
       ],
@@ -71,6 +76,7 @@
     },
     "2016": {
       "position": "Technology Analyst",
+      "companies": ["Infosys Ltd."],
       "roles_played": [
         "Oracle Consultant for Client BI Technical Team",
         "IT Support Member for Customer's Europe Operations"
@@ -96,6 +102,7 @@
     },
     "2017": {
       "position": "Technology Analyst",
+      "companies": ["Infosys Ltd."],
       "roles_played": [
         "Oracle R12 Upgrade support member",
         "Oracle Consultant for Client BI Technical Team"
@@ -118,6 +125,7 @@
     },
     "2018": {
       "position": "Technical Leader",
+      "companies": ["KPIT Ltd."],
       "roles_played": [
         "Product Hub Implementation Consultant",
         "PDH Configuration and Customization",
@@ -141,6 +149,7 @@
     },
     "2019": {
       "position": "Lead Consultant",
+      "companies": ["Birlasoft Ltd."],
       "roles_played": [
         "Product Hub Implementation Consultant",
         "PDH Configuration and Customization",
@@ -168,6 +177,7 @@
     },
     "2020": {
       "position": "Lead Consultant",
+      "companies": ["Birlasoft Ltd."],
       "roles_played": [
         "Product Hub Implementation Consultant",
         "Testing and QA Lead",
@@ -199,6 +209,7 @@
     },
     "2021": {
       "position": "Senior Lead Consultant",
+      "companies": ["Birlasoft Ltd."],
       "roles_played": [
         "Customer Master Implementation Lead",
         "Project Manager",
@@ -216,14 +227,37 @@
         "Workflow and Business Rule Architecture",
         "Integration Solutioning",
         "EDQ processes",
-        "Custom Utilities Development for Address Validation and DnB(DUNS) Matching",
-        "",
-        "User/Employee Creation BOT"
+        "Custom Utilities Development for Address Validation",
+        "Custom Utilities Development for DnB(DUNS) Matching"
       ],
       "impact": [
         "First implementation of Riversand at the Organization",
         "Co-ordinated between Client and Vendors for Project QA Testing",
         "Took multiple additional roles apart from Technical Lead"
+      ]
+    },
+    "2022": {
+      "position": "Senior Lead Consultant",
+      "companies": ["Birlasoft Ltd."],
+      "roles_played": [
+        "Oracle Enterprise Data Management Implementation Lead",
+        "Fit-Gap Analysis",
+        "Solutions Architect and B.A.",
+        "Defect Analysis and Resolutions"
+      ],
+      "other_roles_played": [
+        "Cross-Functional Co-ordinator",
+        "CRP and Test Lead"
+      ],
+      "components": [
+        "Data Model",
+        "System Configuration - Business Rules, Properties, Dimensions, Alternate Dimensions",
+        "Java Spring Application to do automate data load in Oracle EDM Cloud",
+        "EDQ processes for Data Migration"
+      ],
+      "impact": [
+        "First implementation of Oracle EDM at the Organization",
+        "Spring Web Application tool to connect Oracle EDM to any other system for data integration"
       ]
     }
   }
