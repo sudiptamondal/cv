@@ -1,4 +1,19 @@
-
+generateTimelineHTML = function(year, obj) {
+    return '            <li class="timeline__item timeline__item--active">'
+    + '<a class="timeline__link" href="#">'
+    + '<div class="timeline__item__point"></div>'
+    + '</a>'
+    + '<div class="timeline__item__content">'
+    + obj["companies"].map(element => {
+        return '<p class="timeline__item__thumb" style="font-weight: bold;margin:0;">' + element +'</p>'
+        }).join("")
+    + '<p class="timeline__item__thumb">'+ obj["position"] +'</p>'
+    + '<div class="timeline__item__shadow"></div>'
+    + '</div>'
+    + '<div class="timeline__item__year">' + year +'</div>'
+    + '</li>'
+    
+}
 
 generateInnerHTML = function(year, obj) {
 
@@ -23,8 +38,7 @@ generateInnerHTML = function(year, obj) {
         return '<li>' + element +'</li>'
         }).join("")
     + '</ul>'
-    + '</div>';
-
+    + '</div>'; 
     let l_box_2 = '';
     if (obj["impact"].length != 0) {
         l_box_2 = '<p style="border-top: solid 1px #000;width:  80%; margin: auto; margin-top:20px; "> </p>'
@@ -62,7 +76,11 @@ $(document).ready(function() {
 
     cv_data["years"].forEach(year => {
         $(".views").append(generateInnerHTML(year, cv_data["items"][year]))
+        $(".timeline__list").append(generateTimelineHTML(year, cv_data["items"][year]))
+
     });
+
+    
 
     
     let areClipPathShapesSupported = function() {
@@ -80,7 +98,7 @@ $(document).ready(function() {
         }
 
         // Interate over the properties and see if they pass two tests.
-        
+
         for (let i = 0, l = properties.length; i < l; i++) {
             let property = properties[i];
 
@@ -94,16 +112,13 @@ $(document).ready(function() {
                 }
             }
         }
-        
-
         return false;
     };
-
     let defaultSlickSpeed = 300;
-    let firstSlide = cv_data["years"].length
+    let slideCount = cv_data["years"].length
     $('.views').slick({
         speed: defaultSlickSpeed,
-        initialSlide: firstSlide - 1,
+        initialSlide: slideCount - 1,
     }).on('beforeChange', (evt, slick, currentSlide, nextSlide) => {
         let delta = Math.abs(currentSlide - nextSlide);
         if (delta === slick.slideCount - 1) {
@@ -116,10 +131,9 @@ $(document).ready(function() {
         $('.timeline__list').find(`.timeline__item:nth-child(${currentSlide + 1})`).addClass('timeline__item--active');
     }).init(function() {
         $('.timeline__list').find('.timeline__item--active').removeClass('timeline__item--active');
-        $('.timeline__list').find('.timeline__item:nth-child(' + firstSlide + ')').addClass('timeline__item--active');
+        $('.timeline__list').find('.timeline__item:nth-child(' + slideCount + ')').addClass('timeline__item--active');
         console.log('init called');
     });
-
     $('.timeline__link').on('click', evt => {
         evt.preventDefault();
         $('.timeline__item--active').removeClass('timeline__item--active');
@@ -128,10 +142,8 @@ $(document).ready(function() {
         $('.views').slick('slickGoTo', $(evt.currentTarget).parent().prevAll('li').length);
 
     });
-
     let timelineOffset = $('.timeline').offset().left;
     let triangleWidth = $('.timeline__path__triangle--moving').outerWidth();
-
     $('.timeline').on('mousemove', evt => {
         let value = evt.pageX - timelineOffset - triangleWidth / 2;
         $('.timeline__path__triangle--moving').css({
@@ -139,12 +151,9 @@ $(document).ready(function() {
         });
 
     });
-
     if (!areClipPathShapesSupported()) {
         $('body').addClass('no-clippath');
     } else {
         $('body').addClass('clippath');
     }
-
-
 });
