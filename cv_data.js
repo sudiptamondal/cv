@@ -275,6 +275,9 @@ var cv_data = {
       ],
       "components" : [
         "Rollout configuration"
+      ],
+      "impact": [
+        "Built sufficient rules in CDM to prevent data quality issues"
       ]
     }
   }
