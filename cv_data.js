@@ -10,7 +10,9 @@ var cv_data = {
     "2019",
     "2020",
     "2021",
-    "2022"
+    "2022",
+    "2023",
+    "2024"
   ],
   "items": {
     "2012": {
@@ -259,6 +261,23 @@ var cv_data = {
         "First implementation of Oracle EDM at the Organization",
         "Spring Web Application tool to connect Oracle EDM to any other system for data integration"
       ]
+    },
+    "2023": {
+      "position":"Principal Consultant",
+      "companies"":["Birlasoft Ltd."],
+      "roles_played":[
+        "Oracle Customer Data Management - Implementation Lead",
+        "Solutions Architect and B.A.",
+        "Fit-Gap Analysis and Tech Lead",
+        "Rollout Coordinator"
+      ],
+      "other_roles_played": [
+        "Cross-Functional Coordinator"
+      ],
+      "components" : [
+        "Rollout configuration"
+      ]
     }
+    
   }
 }
