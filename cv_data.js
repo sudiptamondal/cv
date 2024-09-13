@@ -11,8 +11,7 @@ var cv_data = {
     "2020",
     "2021",
     "2022",
-    "2023",
-    "2024"
+    "2023"
   ],
   "items": {
     "2012": {
@@ -264,7 +263,7 @@ var cv_data = {
     },
     "2023": {
       "position":"Principal Consultant",
-      "companies"":["Birlasoft Ltd."],
+      "companies":["Birlasoft Ltd."],
       "roles_played":[
         "Oracle Customer Data Management - Implementation Lead",
         "Solutions Architect and B.A.",
@@ -278,6 +277,5 @@ var cv_data = {
         "Rollout configuration"
       ]
     }
-    
   }
 }
