@@ -11,7 +11,8 @@ var cv_data = {
     "2020",
     "2021",
     "2022",
-    "2023"
+    "2023",
+    "2024"
   ],
   "items": {
     "2012": {
@@ -278,6 +279,24 @@ var cv_data = {
       ],
       "impact": [
         "Built sufficient rules in CDM to prevent data quality issues"
+      ]
+    },
+    "2024": {
+      "position":"Principal Consultant",
+      "companies":["Birlasoft Ltd."],
+      "roles_played":[
+        "Oracle Customer Data Management - Implementation Lead",
+        "Solutions Architect and B.A.",
+        "Fit-Gap Analysis"
+      ],
+      "other_roles_played": [
+        "Pre-Sales Consultant"
+      ],
+      "components" : [
+        "Rollout configuration"
+      ],
+      "impact": [
+        "Helping Organization with Pre-sales activities for Project Wins"
       ]
     }
   }
